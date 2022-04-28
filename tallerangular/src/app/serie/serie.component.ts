@@ -27,7 +27,6 @@ export class SerieComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.series);
     this.getSeries();
   }
 
