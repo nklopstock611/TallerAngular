@@ -1,9 +1,9 @@
 <div class="container-fluid">
-  <div class="col-6">
+  <div class="col-5">
     <table class="table">
       <thead>
         <tr>
-          <th class="h4">Id</th>
+          <th class="h4">#</th>
           <th class="h4">Name</th>
           <th class="h4">Channel</th>
           <th class="h4">Seasons</th>
@@ -11,24 +11,28 @@
       </thead>
       <tbody>
         <tr *ngFor="let each_serie of series">
-          <td>
-            <dd>{{each_serie.id}}</dd>
+          <td class="col-1">
+            <dd><strong>{{each_serie.id}}</strong></dd>
           </td>
-          <td>
+          <td class="col-3">
             <dd>{{each_serie.name}}</dd>
           </td>
-          <td>
+          <td class="col-2">
             <dd>{{each_serie.channel}}</dd>
           </td>
-          <td>
+          <td class="col-2">
             <dd>{{each_serie.seasons}}</dd>
           </td>
         </tr>
-        <tr>
-          <td>Average Seasons: {{avgSeasons}}</td>
-        </tr>
       </tbody>
     </table>
+    Average Seasons: {{avgSeasons}}
+
+    <div class="col">
+      <div class="card" id="card-series">
+      </div>
+    </div>
+
   </div>
 </div>
 
