@@ -12,6 +12,8 @@ export class SerieComponent implements OnInit {
 
   series: Array<Serie> = [];
   avgSeasons: number = 0;
+  serie: Serie = new Serie(0, "", "", 0, "", "", "");
+  isSelected: boolean = false;
 
   constructor(private serieService: SerieService) { }
 
@@ -24,6 +26,12 @@ export class SerieComponent implements OnInit {
       this.series = series;
       this.calculateAvgSeasons(series);
     })
+  }
+
+  getSelectedSerie(serie: Serie) {
+    console.log(serie.review);
+    this.isSelected = true;
+    this.serie = serie;
   }
 
   ngOnInit() {

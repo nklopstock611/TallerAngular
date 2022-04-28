@@ -1,35 +1,47 @@
 <div class="container-fluid">
-  <div class="col-5">
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="h4">#</th>
-          <th class="h4">Name</th>
-          <th class="h4">Channel</th>
-          <th class="h4">Seasons</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let each_serie of series">
-          <td class="col-1">
-            <dd><strong>{{each_serie.id}}</strong></dd>
-          </td>
-          <td class="col-3">
-            <dd>{{each_serie.name}}</dd>
-          </td>
-          <td class="col-2">
-            <dd>{{each_serie.channel}}</dd>
-          </td>
-          <td class="col-2">
-            <dd>{{each_serie.seasons}}</dd>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    Average Seasons: {{avgSeasons}}
+  <div class="row">
+    <div class="col-5">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="h4">#</th>
+            <th class="h4">Name</th>
+            <th class="h4">Channel</th>
+            <th class="h4">Seasons</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let each_serie of series">
+            <td class="col-1">
+              <dd><strong>{{each_serie.id}}</strong></dd>
+            </td>
+            <td class="col-3">
+              <dd><button mat-button (click)="getSelectedSerie(each_serie)">{{each_serie.name}}</button></dd>
+            </td>
+            <td class="col-2">
+              <dd>{{each_serie.channel}}</dd>
+            </td>
+            <td class="col-2">
+              <dd>{{each_serie.seasons}}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+      Average Seasons: {{avgSeasons}}
+      </div>
 
-    <div class="col">
-      <div class="card" id="card-series">
+    </div>
+
+    <div class="col-4">
+      <div *ngIf="isSelected == true">
+        <div class="card">
+          <img class="card-img-top" src="{{serie.image}}" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">{{serie.description}}</p>
+            <a href="{{serie.review}}"></a>
+          </div>
+        </div>
       </div>
     </div>
 
