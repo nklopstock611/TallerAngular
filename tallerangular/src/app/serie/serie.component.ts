@@ -29,7 +29,12 @@ export class SerieComponent implements OnInit {
   }
 
   getSelectedSerie(serie: Serie) {
+    console.log(serie.name);
+    console.log(serie.channel);
+    console.log(serie.seasons);
+    console.log(serie.description);
     console.log(serie.review);
+    console.log(serie.image);
     this.isSelected = true;
     this.serie = serie;
   }
