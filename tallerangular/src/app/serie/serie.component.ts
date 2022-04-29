@@ -33,8 +33,8 @@ export class SerieComponent implements OnInit {
     console.log(serie.channel);
     console.log(serie.seasons);
     console.log(serie.description);
-    console.log(serie.review);
-    console.log(serie.image);
+    console.log(serie.webpage);
+    console.log(serie.poster);
     this.isSelected = true;
     this.serie = serie;
   }

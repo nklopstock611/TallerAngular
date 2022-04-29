@@ -36,10 +36,10 @@
     <div class="col-4">
       <div *ngIf="isSelected == true">
         <div class="card">
-          <img class="card-img-top" src="{{serie.image}}" alt="Card image cap">
+          <img class="card-img-top" src="{{serie.poster}}" alt="Card image cap">
           <div class="card-body">
             <p class="card-text"> {{serie.description}} </p>
-            <a href="{{serie.review}}"></a>
+            <a href="{{serie.webpage}}">{{serie.webpage}}</a>
           </div>
         </div>
       </div>
